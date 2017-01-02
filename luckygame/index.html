@@ -1,0 +1,314 @@
+<!DOCTYPE html> 
+<html lang="zh-cmn-Hans"> 
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="街头小游戏"/>
+    <meta name="keywords" content="街头小游戏"/>
+    <meta name="author" content="@本事故纯属虚构"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="街头小游戏">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+ 
+    <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="320">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>街头小游戏</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        #game tbody tr td{
+            text-align: center;
+            border: 2px solid #dddddd;
+            margin: 0px;
+            padding: 2px;
+        }
+        .number{
+            font-size: 2.8em;
+            color: #000000;
+            font-weight: bolder;
+        }
+        .text{
+            font-weight: bold;
+            color: red;
+            font-size: 1.1em;
+        }
+        .target{
+            background-color: #FF5151;
+        }
+        .cash{
+            background-color: #00DB00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>数字小游戏</h1>
+        <table class="table" id="game">
+            <tbody>
+                <tr>
+                    <td id="b1" rel="14" ref="+35">
+                        <span class="number">14</span>
+                        <br />
+                        <span class="text">奖35元</span>
+                    </td>
+                     <td id="b2" rel="15" ref="+5">
+                        <span class="number">15</span>
+                        <br />
+                        <span class="text">奖5元</span>
+                    </td>
+                     <td id="b3" rel="12" ref="+30">
+                        <span class="number">12</span>
+                        <br />
+                        <span class="text">奖30元</span>
+                    </td>
+                     <td id="b4" rel="11" ref="+5">
+                        <span class="number">11</span>
+                        <br />
+                        <span class="text">奖5元</span>
+                    </td>
+                     <td id="b5" rel="10" ref="+15">
+                        <span class="number">10</span>
+                        <br />
+                        <span class="text">奖15元</span>
+                    </td>
+                    <td id="b6" rel="19" ref="+5">
+                        <span class="number">19</span>
+                        <br />
+                        <span class="text">奖5元</span>
+                    </td>
+                     <td id="b7" rel="20" ref="+50">
+                        <span class="number">20</span>
+                        <br />
+                        <span class="text">奖50元</span>
+                    </td>
+                     <td id="b8" rel="7" ref="+5">
+                        <span class="number">7</span>
+                        <br />
+                        <span class="text">奖5元</span>
+                    </td>
+                    <td id="b9" rel="22" ref="+40">
+                        <span class="number">22</span>
+                        <br />
+                        <span class="text">奖40元</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="b26" rel="13" ref="+5">
+                        <span class="number">13</span>
+                        <br />
+                        <span class="text">奖5元</span>
+                    </td>
+                    <td colspan="7" rowspan="4">
+                        游戏规则 <br/>
+                        五粒骰子一起丢数字加起来的和为起点
+                        数完为止
+                        二元一次
+                        一次兑现
+                        玩着自愿
+                        <span class="glyphicon glyphicon-chevron-left"></span> 先定方向 <span class="glyphicon glyphicon-chevron-left"></span>
+                    </td>
+                    <td id="b10" rel="30" ref="+5">
+                        <span class="number">30</span>
+                        <br />
+                        <span class="text">奖5元</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="b25" rel="16" ref="+15">
+                        <span class="number">16</span>
+                        <br />
+                        <span class="text">奖15元</span>
+                    </td>
+                    <td id="b11" rel="24" ref="+35">
+                        <span class="number">24</span>
+                        <br />
+                        <span class="text">奖35元</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="b24" rel="17" ref="+10">
+                        <span class="number">17</span>
+                        <br />
+                        <span class="text">奖10元</span>
+                    </td>
+                    <td id="b12" rel="29" ref="+5">
+                        <span class="number">29</span>
+                        <br />
+                        <span class="text">奖5元</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="b23" rel="18" ref="+35">
+                        <span class="number">18</span>
+                        <br />
+                        <span class="text">奖35元</span>
+                    </td>
+                    <td id="b13" rel="26" ref="+35">
+                        <span class="number">26</span>
+                        <br />
+                        <span class="text">奖35元</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="b22" rel="9" ref="+5">
+                        <span class="number">9</span>
+                        <br />
+                        <span class="text">奖5元</span>
+                    </td>
+                     <td id="b21" rel="8" ref="+50">
+                        <span class="number">8</span>
+                        <br />
+                        <span class="text">奖50元</span>
+                    </td>
+                     <td id="b20" rel="21" ref="+6">
+                        <span class="number">21</span>
+                        <br />
+                        <span class="text">奖6元</span>
+                    </td>
+                     <td id="b19" rel="6" ref="+5">
+                        <span class="number">6</span>
+                        <br />
+                        <span class="text">奖5元</span>
+                    </td>
+                     <td id="b18" rel="23" ref="+5">
+                        <span class="number">23</span>
+                        <br />
+                        <span class="text">奖5元</span>
+                    </td>
+                     <td id="b17" rel="5" ref="+10">
+                        <span class="number">5</span>
+                        <br />
+                        <span class="text">奖10元</span>
+                    </td>
+                     <td id="b16" rel="25" ref="+5">
+                        <span class="number">25</span>
+                        <br />
+                        <span class="text">奖5元</span>
+                    </td>
+                     <td id="b15" rel="28" ref="+35">
+                        <span class="number">28</span>
+                        <br />
+                        <span class="text">奖35元</span>
+                    </td>
+                    <td id="b14" rel="27" ref="-5">
+                        <span class="number">27</span>
+                        <br />
+                        <span class="text" style="color: #000000">罚5元</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <button id="" type="button" class="btn btn-lg btn-primary" disabled="disabled">
+                余额：<span class="label label-default">0</span>
+            </button>
+            <button id="start_auto" type="button" class="btn btn-primary btn-lg">自动玩</button>
+            <button id="start_left" type="button" class="btn btn-primary btn-lg">选左开始</button>
+            <button id="start_right" type="button" class="btn btn-primary btn-lg">选右开始</button>
+            <img src="">
+            <img src="">
+            <img src="">
+            <img src="">
+            <img src="">
+            <img src="">
+        </p>
+        <div class="console">
+            
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var money =0;
+    var total = 0;
+    var current =0;
+    var target =0;
+    var left =true;
+    $(function(){
+        $("#start_left").click(function(){
+            left=true;
+            run();
+        });
+        $("#start_right").click(function(){
+            left=false;
+            run();
+        });
+    });
+
+    function run(){
+        $("td").removeClass("target").removeClass("cash");
+        $("img").attr("src","");
+        money-=2;
+        var r=[Math.ceil(Math.random()*6),Math.ceil(Math.random()*6),Math.ceil(Math.random()*6),Math.ceil(Math.random()*6),Math.ceil(Math.random()*6),Math.ceil(Math.random()*6)];
+        total=0;
+        current=0;
+        target=0;
+        for(var i=0;i<6;i++){
+            $("img:eq("+i+")").attr('src','images/'+r[i]+'.gif');
+            total+=r[i];
+        }
+        setTimeout(function(){
+            show();
+            setTimeout(function(){
+                move();
+            },200);
+        },1200);
+    }
+
+    function show(){
+        var a = $("td[rel="+total+"]");
+        a.addClass("target");
+        current = parseInt(a.attr("id").substr(1)); 
+        if(left){
+            target = (current+total-1)%26;
+        }else{
+            target = (Math.abs(current-total-1))%26;
+        } 
+        if(target==0)
+            target=26;
+    }
+
+    function move(){
+        if(total>1)
+        {
+            $("td").removeClass("cash");
+            if(left){
+                current++;
+                if(current==26)
+                    $("#b26").addClass("cash");
+                else
+                    $("#b"+((current)%26)).addClass("cash");
+            }else{
+                current--;
+                if(current<0){
+                    current+=26;
+                }
+                if(current==26)
+                    $("#b26").addClass("cash");
+                else
+                    $("#b"+(current%26)).addClass("cash");
+            }
+            total--;
+            setTimeout(function(){
+                move();
+            },200);
+        }else{
+            alert(parseInt($("#b"+target).attr("ref")));
+        }
+    }
+</script>
+</html>
